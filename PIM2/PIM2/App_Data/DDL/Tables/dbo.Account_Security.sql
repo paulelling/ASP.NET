@@ -1,0 +1,23 @@
+CREATE TABLE [dbo].[Account_Security](
+	[Account_Security_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Account_ID] [int] NOT NULL,
+ CONSTRAINT [PK_Account_Security] PRIMARY KEY CLUSTERED 
+(
+	[Account_Security_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UK_Account_Security] UNIQUE NONCLUSTERED 
+(
+	[Account_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[Account_Security]  WITH CHECK ADD  CONSTRAINT [FK_Account_Security_Account] FOREIGN KEY([Account_ID])
+REFERENCES [dbo].[Account] ([Account_ID])
+GO
+
+ALTER TABLE [dbo].[Account_Security] CHECK CONSTRAINT [FK_Account_Security_Account]
+GO
+
+

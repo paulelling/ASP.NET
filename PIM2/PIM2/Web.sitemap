@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="PIM2"  description="">
+		<siteMapNode url="~/Index.aspx" title="Home"  description="">
+		</siteMapNode>
+		<siteMapNode url="~/Administration.aspx" title="Administration"  description="">
+			<siteMapNode title="Types" url="~/Type.aspx"></siteMapNode>
+		</siteMapNode>
+		<siteMapNode url="~/Finances.aspx" title="Finances"  description="">
+			<siteMapNode title="Spending" url="~/Spending.aspx"></siteMapNode>
+			<siteMapNode title="Budget" url="~/Budget.aspx"></siteMapNode>
+			<siteMapNode title="Status" url="~/Status.aspx"></siteMapNode>
+			<siteMapNode title="Transactions" url="~/Transaction.aspx" description="">
+				<siteMapNode title="Definitions" url="~/Definition.aspx"></siteMapNode>
+			</siteMapNode>
+			<siteMapNode title="Accounts" url="~/Account.aspx"></siteMapNode>
+			<siteMapNode title="Vendors" url="~/Vendor.aspx"></siteMapNode>
+		</siteMapNode>		
+    </siteMapNode>
+</siteMap>

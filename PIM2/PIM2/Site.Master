@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PIM2.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>PIM 2</title>
+    <asp:ContentPlaceHolder ID="cphPIM2Head" runat="server">
+    </asp:ContentPlaceHolder>    
+    <script type="text/javascript" src="Scripts/ClientFunctions.js"></script>
+    <link rel="Stylesheet" href="Style.css" />
+</head>
+<body>
+    <form id="frmPIM2" runat="server">
+    <div>
+        <asp:Menu ID="mnuPIM2" runat="server" DataSourceID="smdsPIM2Navigation" Orientation="Horizontal"
+         StaticEnableDefaultPopOutImage="false" DynamicEnableDefaultPopOutImage="false"
+         StaticDisplayLevels="1" MaximumDynamicDisplayLevels="2">                                
+            <StaticMenuItemStyle CssClass="primaryStaticMenuItem" HorizontalPadding="4px" />
+            <StaticHoverStyle BackColor="Silver" ForeColor="Black" Font-Names="Arial" Font-Size="Small" />
+            <DynamicMenuItemStyle CssClass="primaryDynamicMenuItem" HorizontalPadding="4px" />
+            <DynamicHoverStyle BackColor="Silver" ForeColor="Black" Font-Names="Arial" Font-Size="Small" />
+        </asp:Menu>
+        <p>&nbsp;</p>
+        <asp:SiteMapDataSource ID="smdsPIM2Navigation" runat="server" ShowStartingNode="False" />
+        <asp:ContentPlaceHolder ID="cphPIM2Content" runat="server">        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

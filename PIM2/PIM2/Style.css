@@ -1,0 +1,67 @@
+﻿body {
+}
+
+.primaryStaticMenuItem
+{
+   background-color: Navy; 
+   color: White;
+   font-family: Arial;
+   font-size: small; 
+}
+
+.primaryDynamicMenuItem
+{
+   background-color: Navy; 
+   color: White;
+   font-family: Arial;
+   font-size: small; 
+}    
+    
+.pageTitle
+{
+   background-color: White; 
+   color: Black;
+   font-family: Arial;
+   font-size: small;      
+}
+
+.status
+{
+   background-color: White; 
+   color: Black;
+   font-family: Arial;
+   font-size: small;      
+}
+
+.error
+{
+   background-color: White; 
+   color: Red;
+   font-family: Arial;
+   font-size: small;      
+}
+
+.grid
+{
+   background-color: White; 
+   color: Black;
+   font-family: Arial;
+   font-size: small;      
+}
+
+.gridHeader
+{
+   background-color: Navy; 
+   color: White;
+   font-family: Arial;
+   font-size: small; 
+}
+
+.gridAlternatingRow
+{
+   background-color: Silver; 
+   color: Black;
+   font-family: Arial;
+   font-size: small;      
+}
+

@@ -1,0 +1,24 @@
+CREATE TABLE [dbo].[Type_Value](
+	[Value_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Value] [varchar](50) NOT NULL,
+	[Type_ID] [int] NOT NULL,
+	[Order_By] [int] NULL,
+ CONSTRAINT [PK_Type_Value] PRIMARY KEY CLUSTERED 
+(
+	[Value_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Type_Value]  WITH CHECK ADD  CONSTRAINT [FK_Type_Value_Type] FOREIGN KEY([Type_ID])
+REFERENCES [dbo].[Type] ([Type_ID])
+GO
+
+ALTER TABLE [dbo].[Type_Value] CHECK CONSTRAINT [FK_Type_Value_Type]
+GO
+
+
